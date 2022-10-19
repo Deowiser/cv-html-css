@@ -49,19 +49,19 @@ img {
 }
 
 pre {
+	max-width: 600px;
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
 	padding: 16px;
 	overflow: auto;
-	font-size: clamp(1rem, 3vw, 1.4rem);
+	font-size: 1.6rem;
 	line-height: 1.5;
 	background-color: rgba(37, 37, 37, 0.4);
 	border-radius: 5px;
 }
 
-pre code {
+code {
 	display: inline;
-	overflow: visible;
 	line-height: inherit;
 	word-wrap: normal;
 	background-color: transparent;
@@ -69,10 +69,8 @@ pre code {
 }
 
 a {
-	position: relative;
 	text-decoration: none;
 	color: white;
-	border-bottom: 1px dashed transparent;
 }
 
 a:hover {
@@ -114,12 +112,54 @@ a:hover {
 	background: #070707;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1199px) {
+	pre {
+		max-width: 500px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
 	.container {
 		width: 100%;
 		grid-template-columns: 1fr;
 		gap: 7rem;
 		padding: 3rem;
+	}
+
+	.code_example {
+		display: flex;
+		flex-direction: column;
+	}
+
+	pre {
+		width: 600px;
+		justify-self: center;
+		align-self: center;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.profile_container {
+		flex-direction: column;
+	}
+
+	pre {
+		max-width: 500px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.container {
+		padding: 2rem;
+	}
+	pre {
+		max-width: 320px;
+	}
+}
+
+@media only screen and (max-width: 280px) {
+	pre {
+		max-width: 240px;
 	}
 }
 
@@ -199,18 +239,8 @@ a:hover {
 	text-transform: uppercase;
 }
 
-.about-me {
-	font-size: clamp(1rem, 3vw, 1.6rem);
-}
-
 .git-hub-link:hover {
 	color: var(--primary-color);
-}
-
-@media only screen and (max-width: 768px) {
-	.profile_container {
-		flex-direction: column;
-	}
 }
 
 /* Skills (expertise) */
@@ -238,7 +268,7 @@ a:hover {
 /* Code example */
 
 .task_description {
-	font-size: clamp(1rem, 3vw, 1.6rem);
+	font-size: 1.6rem;
 }
 
 .social_items,
@@ -253,10 +283,4 @@ a:hover {
 	justify-content: flex-start;
 	margin-top: 1.5rem;
 	font-size: 1.5rem;
-}
-
-@media only screen and (max-width: 768px) {
-	hr {
-		margin: 0 auto;
-	}
 }
