@@ -60,8 +60,6 @@ pre {
 
 pre code {
 	display: inline;
-	padding: 0;
-	margin: 0;
 	overflow: visible;
 	line-height: inherit;
 	word-wrap: normal;
@@ -70,13 +68,14 @@ pre code {
 }
 
 a {
+	position: relative;
 	text-decoration: none;
 	color: white;
+	border-bottom: 1px dashed transparent;
 }
 
 a:hover {
 	color: var(--primary-color);
-	border-bottom: 1px dashed var(--primary-color);
 }
 
 .description {
@@ -241,7 +240,8 @@ a:hover {
 	font-size: clamp(1rem, 3vw, 1.6rem);
 }
 
-.social_items, .contacts_info {
+.social_items,
+.contacts_info {
 	margin-top: 1.5rem;
 }
 
@@ -250,7 +250,6 @@ a:hover {
 	gap: 0.5rem;
 	align-items: center;
 	justify-content: flex-start;
-	color: var(--text-color);
 	margin-top: 1.5rem;
 	font-size: 1.5rem;
 }
