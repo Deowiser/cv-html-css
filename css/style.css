@@ -26,6 +26,7 @@ body {
 /* Common styles */
 
 p {
+	line-height: 2;
 	color: var(--text-color);
 }
 
@@ -53,7 +54,7 @@ pre {
 	padding: 16px;
 	overflow: auto;
 	font-size: clamp(1rem, 3vw, 1.4rem);
-	line-height: 1.45;
+	line-height: 1.5;
 	background-color: rgba(37, 37, 37, 0.4);
 	border-radius: 5px;
 }
