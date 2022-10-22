@@ -23,8 +23,6 @@ body {
 	border-radius: 5px;
 }
 
-/* Common styles */
-
 p {
 	line-height: 2;
 	color: var(--text-color);
@@ -75,6 +73,11 @@ a {
 
 a:hover {
 	color: var(--primary-color);
+	transition: color linear 0.4s;
+}
+
+a:not(:hover) {
+	transition: color linear 0.4s;
 }
 
 .description {
@@ -99,7 +102,7 @@ a:hover {
 	text-transform: uppercase;
 }
 
-/* Layout */
+/* ========== Layout ========== */
 
 .container {
 	max-width: 1200px;
@@ -175,36 +178,64 @@ a:hover {
 	gap: 5rem;
 }
 
-.group-3 {
+/* ========== Footer ========== */
+
+.footer {
 	max-width: 700px;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 5rem;
+	font-size: 1.5rem;
 	grid-column: 1 / -1;
 	display: flex;
 	flex-direction: row;
 	gap: 5rem;
 }
 
-.group-3 > div {
+.footer > div {
 	flex: 1;
 	font-style: italic;
 }
 
-.group-3 > address {
+.footer > address {
 	flex: 1;
 	font-style: italic;
+}
+
+/* ========== Course ========== */
+
+.course_logo {
+	display: block;
+	margin-top: 1.5rem;
+	padding: 1rem;
+	max-width: 200px;
+	background-color: #353535;
+	border-radius: 5px;
+}
+
+.course_logo:hover {
+	background-color: var(--primary-color);
+	transition: background-color linear 0.5s;
+}
+
+.course_logo:not(:hover) {
+	transition: linear 0.5s;
+}
+
+.copyright {
+	margin-top: 1.5rem;
+	padding: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
 	.profile {
 		margin-bottom: 0;
 	}
-	.group-3 {
+	.footer {
 		flex-direction: column;
 	}
 }
 
-/* profile */
+/* ========== Profile ========== */
 
 .profile_container {
 	display: flex;
@@ -243,7 +274,7 @@ a:hover {
 	color: var(--primary-color);
 }
 
-/* Skills (expertise) */
+/* ========== Skills ========== */
 
 .skill_list {
 	margin-top: 1.5rem;
@@ -257,7 +288,7 @@ a:hover {
 	line-height: 2;
 }
 
-/* Education and courses */
+/* ========== Education and courses ========== */
 
 .education_list {
 	margin-top: 1.5rem;
@@ -265,7 +296,7 @@ a:hover {
 	line-height: 2;
 }
 
-/* Code example */
+/* ========== Code example ========== */
 
 .task_description {
 	font-size: 1.6rem;
