@@ -19,10 +19,6 @@ body {
 	color: white;
 }
 
-.header-img {
-	border-radius: 5px;
-}
-
 p {
 	line-height: 2;
 	color: var(--text-color);
@@ -242,8 +238,9 @@ a:not(:hover) {
 	gap: 2rem;
 }
 
-.header_headerImg {
+.header_profile_photo {
 	max-width: 250px;
+	border-radius: 5px;
 }
 
 .header_name_firstName {
