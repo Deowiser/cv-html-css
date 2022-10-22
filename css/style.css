@@ -19,7 +19,7 @@ body {
 	color: white;
 }
 
-.profile-img {
+.header-img {
 	border-radius: 5px;
 }
 
@@ -142,7 +142,7 @@ a:not(:hover) {
 }
 
 @media only screen and (max-width: 767px) {
-	.profile_container {
+	.header_container {
 		flex-direction: column;
 	}
 
@@ -166,7 +166,7 @@ a:not(:hover) {
 	}
 }
 
-.profile {
+.header {
 	grid-column: 1 / -1;
 	margin-bottom: 2rem;
 }
@@ -227,7 +227,7 @@ a:not(:hover) {
 }
 
 @media only screen and (max-width: 768px) {
-	.profile {
+	.header {
 		margin-bottom: 0;
 	}
 	.footer {
@@ -235,18 +235,18 @@ a:not(:hover) {
 	}
 }
 
-/* ========== Profile ========== */
+/* ========== Header ========== */
 
-.profile_container {
+.header_container {
 	display: flex;
 	gap: 2rem;
 }
 
-.profile_profileImg {
+.header_headerImg {
 	max-width: 250px;
 }
 
-.profile_name_firstName {
+.header_name_firstName {
 	color: white;
 	font-weight: 200;
 	font-size: clamp(2rem, 8vw, 4rem);
@@ -255,7 +255,7 @@ a:not(:hover) {
 	margin-bottom: -0.8rem;
 }
 
-.profile_name_lastName {
+.header_name_lastName {
 	color: var(--primary-color);
 	font-weight: 700;
 	font-size: clamp(2.5rem, 15vw, 7rem);
@@ -263,7 +263,7 @@ a:not(:hover) {
 	display: block;
 }
 
-.profile_title {
+.header_title {
 	margin-bottom: 2rem;
 	font-size: 1.6rem;
 	font-weight: 400;
