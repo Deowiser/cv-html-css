@@ -4,13 +4,18 @@
 	box-sizing: border-box;
 }
 
+/* ========== Colors ========== */
+
 :root {
 	--primary-color: #ff7613;
 	--text-color: #7a7878;
 }
 
+/* ========== Common styles ========== */
+
 html {
 	font-size: 10px;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -75,6 +80,8 @@ a:hover {
 a:not(:hover) {
 	transition: color linear 0.4s;
 }
+
+/* ==================== */
 
 .description {
 	margin-top: 1.5rem;
@@ -162,39 +169,11 @@ a:not(:hover) {
 	}
 }
 
-.header {
-	grid-column: 1 / -1;
-	margin-bottom: 2rem;
-}
-
 .main,
 .code_example {
 	display: flex;
 	flex-direction: column;
 	gap: 5rem;
-}
-
-/* ========== Footer ========== */
-
-.footer {
-	max-width: 700px;
-	width: 100%;
-	margin: 0 auto 5rem;
-	font-size: 1.5rem;
-	grid-column: 1 / -1;
-	display: flex;
-	flex-direction: row;
-	gap: 5rem;
-}
-
-.footer > div {
-	flex: 1;
-	font-style: italic;
-}
-
-.footer > address {
-	flex: 1;
-	font-style: italic;
 }
 
 /* ========== Course ========== */
@@ -222,16 +201,13 @@ a:not(:hover) {
 	padding: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
-	.header {
-		margin-bottom: 0;
-	}
-	.footer {
-		flex-direction: column;
-	}
-}
-
 /* ========== Header ========== */
+
+.header {
+	position: relative;
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+}
 
 .header_container {
 	display: flex;
@@ -267,8 +243,32 @@ a:not(:hover) {
 	text-transform: uppercase;
 }
 
-.git-hub-link:hover {
-	color: var(--primary-color);
+.menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 1.5rem;
+	border-radius: 5px;
+}
+
+.menu_list {
+	display: flex;
+}
+
+.menu_list li:last-child {
+	padding-right: 0;
+}
+
+.menu_list li {
+	padding-right: 1rem;
+	font-size: 1.5rem;
+	list-style-type: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.menu {
+		position: static;
+	}
 }
 
 /* ========== Skills ========== */
@@ -306,4 +306,37 @@ a:not(:hover) {
 	justify-content: flex-start;
 	margin-top: 1.5rem;
 	font-size: 1.5rem;
+}
+
+/* ========== Footer ========== */
+
+.footer {
+	max-width: 700px;
+	width: 100%;
+	margin: 0 auto 5rem;
+	font-size: 1.5rem;
+	grid-column: 1 / -1;
+	display: flex;
+	flex-direction: row;
+	gap: 5rem;
+}
+
+.footer > div {
+	flex: 1;
+	font-style: italic;
+}
+
+.footer > address {
+	flex: 1;
+	font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+	.header {
+		margin-bottom: 0;
+	}
+
+	.footer {
+		flex-direction: column;
+	}
 }
