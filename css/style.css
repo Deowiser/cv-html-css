@@ -125,7 +125,7 @@ a:not(:hover) {
 		padding: 3rem;
 	}
 
-	.code_example {
+	.code_example_inner {
 		display: flex;
 		flex-direction: column;
 	}
@@ -167,8 +167,8 @@ a:not(:hover) {
 	margin-bottom: 2rem;
 }
 
-.group-1,
-.group-2 {
+.main,
+.code_example {
 	display: flex;
 	flex-direction: column;
 	gap: 5rem;
